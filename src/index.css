@@ -87,3 +87,15 @@ body {
 .center {
   text-align: center;
 }
+
+.warning-message {
+  max-width: 30rem;
+  background-color: #ffcc00; /* Light yellow background for visibility */
+  color: #333333; /* Dark text for readability */
+  border: 1px solid #ff9900; /* Orange border for emphasis */
+  padding: 15px; /* Padding for spacing around the text */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  font-weight: bold; /* Bold text to catch attention */
+  text-align: center; /* Center the text within the div */
+  margin: 2rem auto; /* Spacing above and below the message */
+}

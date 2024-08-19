@@ -11,6 +11,8 @@ function App() {
     duration: 10,
   });
 
+  const inputIsValid = userInputs.duration >= 1;
+
   function handleInput(event, field) {
     setUserInputs((prevState) => ({
       ...prevState,
@@ -22,7 +24,13 @@ function App() {
       <div id="body">
         <Header />
         <Input onEdit={handleInput} inputs={userInputs} />
-        <Results inputData={userInputs} />
+        {!inputIsValid && (
+          <div className="warning-message">
+            <p>Please enter a valid input!</p>
+            <p>Note: duration must be positive and non zero.</p>
+          </div>
+        )}
+        {inputIsValid && <Results inputData={userInputs} />}
       </div>
     </>
   );
